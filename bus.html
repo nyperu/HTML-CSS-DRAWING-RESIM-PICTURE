@@ -5,19 +5,31 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
      <style type="text/css">
-        .bus{width: 400px; height: 600px; margin: 45px auto; background-color: yellow;}
+        .bus{width: 400px; height: 600px; margin: 45px auto;}
         .antenna{width:100px; height: 2px; background-color: black; margin: 100px auto 0 auto; transform: rotate(290deg);}
         .leftmirror{width: 39px; height: 25px;  border-top:1px solid #000000; border-left:1px solid #000000; border-bottom: 1px solid #000000; border-radius: 5px 0 0 5px; background-color: pink; margin: 240px 0 0 0; float: left;}
         .rightmirror{width: 39px; height: 25px;  border-top:1px solid #000000; border-right:1px solid #000000; border-bottom: 1px solid #000000; border-radius: 0 5px 5px 0; background-color: pink; margin: 240px 0 0 0;float: left;}
         .window{width: 318px; height: 230px; margin-top: 45px; border: 1px solid #000000; border-radius: 15px 15px 0 0; float: left;}
-        .hood{width: 318px; height: 120px; border: 1px solid #000000; clear: both; margin: 0 auto 0 auto; background-color: pink; border-radius: 0 0 10px 10px;}
+        .hood{width: 318px; height: 120px; border: 1px solid #000000; clear: both; margin: 0 auto 0 auto; background-color: pink; border-radius: 0 0 10px 10px; position:relative; z-index: 2;}
         .leftwhelle{width: 50px; height: 40px; background-color: #000000; border-radius: 0 0 5px 5px; margin: 0 0 0 80px; float: left;}
         .rightwhelle{width: 50px; height: 40px; background-color: #000000; border-radius: 0 0 5px 5px; margin: 0 0 0 140px; float: left;}
         .rearmirror{width: 70px; height: 20px; background-color: #cccccc; border: 1px solid #000; border-radius: 5px; margin: 30px auto 0 auto;}
         .leftseat{width: 120px; height: 120px; border-radius:  10px 10px 0 0; background-color: #90f; margin: 58px 0 0 20px; float: left;}
-        .rightseat{width: 120px; height: 120px; border-radius:  10px 10px 0 0; background-color: #90f; margin: 58px 0 0 35px; float: left;}
-        .steer{width: 60px; height: 30px; border-radius: 40px 40px; border-top: 8px solid black; border-left: 8px solid black; border-right: 8px solid black; margin:90px 0 0 20px}
-     </style>
+        .rightseat{width: 120px; height: 120px; border-radius:  10px 10px 0 0; background-color: #90f; margin: 58px 0 0 37px; float: left;}
+        .steer{width: 60px; height: 30px; border-radius: 40px 40px 0 0 ; border-top: 8px solid black; border-left: 8px solid black; border-right: 8px solid black; margin:90px 0 0 20px}
+        .leftwiper{width: 110px; height: 3px; background-color: black; border-radius: 2px; margin: 118px 0 0 28px;}
+        .rightwiper{width: 110px; height: 3px; background-color: black; border-radius: 2px; margin: -10px 0 0 -10px;}
+        .leftlight{width: 50px; height: 50px; border-radius: 25px; background: #ffff99; margin: 30px 0 0 20px;  box-shadow: 5px 5px 15px yellow, -5px -5px 15px yellow; float: left;}
+        .grids{width: 150px; height: 100px; float: left; margin: 10px 0 0 12px;}
+        .rightlight{width: 50px; height: 50px; border-radius: 25px; background: #ffff99; margin: 30px 0 0 12px;  box-shadow: 5px 5px 15px yellow, -5px -5px 15px yellow; float: left;}
+        .grid1{width: 70px; height: 3px; background: #444444; margin: 25px auto 0 auto;}
+        .grid2{width: 80px; height: 3px; background: #444444; margin: 5px auto 0 auto;}
+        .grid3{width: 90px; height: 3px; background: #444444; margin: 5px auto 0 auto;}
+        .grid4{width: 100px; height: 3px; background: #444444; margin: 5px auto 0 auto;}
+        .carplate{width: 120px; height: 20px; background-color:white; border: 1px solid black;margin: 20px auto 0 auto;}
+        .left-part-plate{width: 15px; height: 15px; background: blue; color:  white; font: 10px tahoma; text-align: center; float: left; padding: 5px 0 0 0;}
+        .right-part-plate{width: 105px; height: 15px; background: white; color:  black; font: bold 14px tahoma; text-align: center; float: left; }
+  </style>
  </head>
  <body>
         <div class="bus">
@@ -25,12 +37,30 @@
             <div class="leftmirror"></div>
             <div class="window">
                 <div class="rearmirror"></div>
-                <div class="leftseat"></div>
-                <div class="rightseat"><div class="steer"></div></div>
+                <div class="leftseat">
+                    <div class="leftwiper"></div>
+                </div>
+                <div class="rightseat">
+                    <div class="steer"></div>
+                    <div class="rightwiper"></div>
+                </div>
                 
             </div>
             <div class="rightmirror"></div>
-            <div class="hood"></div>
+            <div class="hood">
+                <div class="leftlight"></div>
+                <div class="grids">
+                    <div class="grid1"></div>
+                    <div class="grid2"></div>
+                    <div class="grid3"></div>
+                    <div class="grid4"></div>
+                    <div class="carplate">
+                        <div class="left-part-plate">TR</div>
+                        <div class="right-part-plate">07 SZR 74</div>
+                    </div>
+                </div>
+                <div class="rightlight"></div>
+            </div>
             <div class="leftwhelle"></div>
             <div class="rightwhelle"></div>
         </div>
